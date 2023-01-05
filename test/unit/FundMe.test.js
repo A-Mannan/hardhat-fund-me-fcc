@@ -141,7 +141,7 @@ const { developmentChains } = require("../../helper-hardhat-config")
                   )
                   await expect(
                       fundMeConnectedContract.withdraw()
-                  ).to.be.revertedWith("FundMe__NotOwner")
+                  ).to.be.revertedWithCustomError("FundMe__NotOwner")
               })
           })
       })
